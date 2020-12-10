@@ -1,6 +1,6 @@
 import re
 
-rules = [line.strip() for line in open('day7/input.txt', 'r')]
+rules = [line.strip() for line in open('day07/input.txt', 'r')]
 ruleDict = {}
 for rule in rules:
     parts = rule.split(' bags contain ')

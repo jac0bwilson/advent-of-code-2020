@@ -27,6 +27,6 @@ def part2(passports):
 
     print(valid)
 
-passports = open('day4/input.txt', 'r').read().split('\n\n')
+passports = open('day04/input.txt', 'r').read().split('\n\n')
 part1(passports)
 part2(passports)

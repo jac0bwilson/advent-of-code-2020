@@ -53,6 +53,6 @@ def part2(instructions):
                 print(acc)
                 return
 
-instructions = [line.strip() for line in open('day8/input.txt', 'r')]
+instructions = [line.strip() for line in open('day08/input.txt', 'r')]
 part1(instructions)
 part2(instructions)

@@ -1,7 +1,7 @@
 from itertools import combinations
 import math
 
-expenses = [int(line) for line in open('day1/input.txt', 'r')]
+expenses = [int(line) for line in open('day01/input.txt', 'r')]
 
 for i in {2,3}:
     combination = combinations(expenses, i)

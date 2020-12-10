@@ -23,6 +23,6 @@ def part2(seats):
              print(sortedIDs[i + 1] - 1)
              break
 
-seats = [line.strip() for line in open('day5/input.txt', 'r')]
+seats = [line.strip() for line in open('day05/input.txt', 'r')]
 part1(seats)
 part2(seats)

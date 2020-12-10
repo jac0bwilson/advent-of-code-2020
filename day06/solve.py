@@ -21,6 +21,6 @@ def part2(answers):
     
     print(total)
 
-answers = open('day6/input.txt', 'r').read().split('\n\n')
+answers = open('day06/input.txt', 'r').read().split('\n\n')
 part1(answers)
 part2(answers)

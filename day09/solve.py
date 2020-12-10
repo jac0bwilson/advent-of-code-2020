@@ -17,6 +17,6 @@ def part2(numbers, target):
                 print(sort[0] + sort[-1])
                 return
 
-numbers = [int(line.strip()) for line in open('day9/input.txt', 'r')]
+numbers = [int(line.strip()) for line in open('day09/input.txt', 'r')]
 target = part1(numbers)
 part2(numbers, target)

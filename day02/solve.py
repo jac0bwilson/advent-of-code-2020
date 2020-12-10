@@ -32,6 +32,6 @@ def part2(lines):
 
     print(valid)
 
-lines = [line.strip() for line in open('day2/input.txt', 'r')]
+lines = [line.strip() for line in open('day02/input.txt', 'r')]
 part1(lines)
 part2(lines)
