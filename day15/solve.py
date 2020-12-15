@@ -7,10 +7,11 @@ def solver(numbers, target):
         last = val
 
     for i in range(len(said), target):
-        last_added = last
+        lastAdded = last
+
         if last in said.keys():
             last = i - 1 - said[last]
-            said[last_added] = i - 1
+            said[lastAdded] = i - 1
         else:
             said[last] = i - 1
             last = 0

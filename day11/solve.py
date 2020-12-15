@@ -4,7 +4,7 @@ def simulate(seats, maxOccupied, tolerance):
     nextSeats = [['#' if seat == 'L' else '.' for seat in line] for line in seats]
     height = len(seats)
     width = len(seats[0])
-    checkRange = lambda col, row: 0 <= col < height and 0 <= row < width
+    checkRange = lambda col, row: 0 <= col < height and 0 <= row < width # checks that coordinates are within range
 
     while nextSeats != seats:
         seats = nextSeats
@@ -16,9 +16,11 @@ def simulate(seats, maxOccupied, tolerance):
                     continue
                 
                 nearby = 0
+
                 for j in range(-1, 2):
                     for i in range(-1, 2):
                         newCol, newRow = col + j, row + i
+
                         if (j == 0 and i == 0) or not(checkRange(newCol, newRow)):
                             continue
 

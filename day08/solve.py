@@ -2,6 +2,7 @@ import copy, re
 
 def parseInstructions(instructions):
     output = []
+
     for instruction in instructions:
         parse = re.match(r'([a-z]{3}) ([-+]\d+)', instruction)
         op = parse.group(1)
@@ -19,7 +20,6 @@ def runProgram(instructions):
             return acc, False
 
         visited.add(i)
-        
         op = instructions[i][0]
         num = instructions[i][1]        
 
@@ -41,6 +41,7 @@ def part2(instructions):
     parsed = parseInstructions(instructions)
 
     for i in range(len(parsed)):
+        # used `copy.deepcopy` to ensure nothing is changed when it shouldn't be
         copyList = copy.deepcopy(parsed)
         if copyList[i][0] == 'jmp' or copyList[i][0] == 'nop':
             if copyList[i][0] == 'jmp':
@@ -49,6 +50,7 @@ def part2(instructions):
                 copyList[i][0] = 'jmp'
 
             acc, terminated = runProgram(copyList)
+
             if terminated:
                 print(acc)
                 return

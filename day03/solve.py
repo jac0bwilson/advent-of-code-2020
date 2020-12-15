@@ -19,6 +19,5 @@ def part2(grid):
     print(product)
 
 forest = [line.strip() for line in open('day03/input.txt', 'r')]
-
 part1(forest)
 part2(forest)

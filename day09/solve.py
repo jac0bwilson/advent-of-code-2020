@@ -5,6 +5,7 @@ def part1(numbers):
         twentyFive = numbers[i:i+25]
         comb = combinations(twentyFive, 2)
         sums = [sum(opt) for opt in comb]
+        
         if numbers[i + 25] not in sums:
             print(numbers[i + 25])
             return numbers[i + 25]

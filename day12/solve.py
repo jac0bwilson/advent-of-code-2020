@@ -2,6 +2,7 @@ import re
 
 def parseInstructions(instructions):
     output = []
+    
     for instruction in instructions:
         parse = re.match(r'(\w)(\d+)', instruction)
         output.append((parse.group(1), int(parse.group(2))))

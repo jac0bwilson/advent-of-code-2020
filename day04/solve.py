@@ -22,6 +22,7 @@ def part2(passports):
             valEyr = 2020 <= int(eyr.group(1)) <= 2030
             valHgt = 150 <= int(hgt.group(1)) <= 193 if hgt.group(2) == "cm" else (59 <= int(hgt.group(1)) <= 76 if hgt.group(2) == "in" else False)
             
+            # `all` replaces the need to use x and y and z...
             if all([valByr, valIyr, valEyr, valHgt]):
                 valid+= 1
 

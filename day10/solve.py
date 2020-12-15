@@ -4,8 +4,10 @@ def part1(numbers):
 
 def part2(numbers):
     solutions = [1]
+    
     for i in range(1, len(numbers)):
         opt = 0
+
         for j in range(i):
             if numbers[i] <= numbers[j] + 3:
                 opt += solutions[j]

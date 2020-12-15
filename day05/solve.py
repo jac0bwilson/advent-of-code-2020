@@ -6,12 +6,14 @@ def getSeatID(seat):
         'R': '1'
     }
     newstr = ''
+
     for char in seat:
         newstr += mapping[char]
     
     return int(newstr, 2)
 
 def part1(seats):
+    # use `map` to apply the function over all elements
     print(max(map(getSeatID, seats)))
 
 def part2(seats):
